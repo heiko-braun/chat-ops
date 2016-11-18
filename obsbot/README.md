@@ -27,3 +27,7 @@ HUBOT_JIRA_USERNAME=<Jira User>
 HUBOT_LOG_LEVEL=debug
 HUBOT_SLACK_TOKEN=<SLACK TOKEN>
 ```
+
+# Further docs (i.e. chat commands)
+
+* Jira bot: https://github.com/ndaversa/hubot-jira-bot
