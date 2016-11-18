@@ -1,6 +1,6 @@
 node_modules
 .DS_Store*
 .hubot_history
-token.txt
+*.txt
 *.sh
 
