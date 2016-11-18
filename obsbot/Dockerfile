@@ -28,6 +28,7 @@ RUN yo hubot --owner="Heiko Braun <hbraun@redhat.com>" --name="hbraun" --descrip
 # Some adapters / scripts
 RUN npm install hubot-slack --save && npm install
 RUN npm install hubot-standup-alarm --save && npm install
+RUN npm install hubot-jira-bot --save && npm install
 RUN npm install hubot-auth --save && npm install
 #RUN npm install hubot-google-translate --save && npm install
 #RUN npm install hubot-github --save && npm install
@@ -39,6 +40,8 @@ RUN npm install hubot-auth --save && npm install
 ADD hubot-scripts.json /hubot/
 ADD external-scripts.json /hubot/
 
-# And go
-#CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-1 s3://pgarbe-secrets/env.sh .; . ./env.sh; bin/hubot --adapter slack"]
-CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-1 ./env.sh; bin/hubot --adapter slack"]
+# Start (pulling secrets from s3)
+#CMD ["/bin/sh", "-c", "aws s3 cp --region eu-west-1 s3://obs-secrets/env.sh .; . ./env.sh; bin/hubot --adapter slack"]
+
+# Start with manually provided secrets
+CMD ["/bin/sh", "-c", "bin/hubot --adapter slack"]
