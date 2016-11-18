@@ -5,6 +5,6 @@
   "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-auth",
-  "hubot-standup"
+  "hubot-auth",  
+  "hubot-jira-bot"
 ]
