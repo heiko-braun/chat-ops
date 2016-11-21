@@ -31,3 +31,4 @@ HUBOT_SLACK_TOKEN=<SLACK TOKEN>
 # Further docs (i.e. chat commands)
 
 * Jira bot: https://github.com/ndaversa/hubot-jira-bot
+* S3 brain: https://github.com/dylanmei/hubot-s3-brain
